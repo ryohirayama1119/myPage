@@ -1,0 +1,47 @@
+doctype
+html(lang="ja")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title 平山凌 | Hirayama Ryo
+        meta(name="description", content="平山凌のポートフォリオ")
+        // CSS
+        link(rel="stylesheet", href="../css/destyle.css")
+        // original-css
+        link(rel="stylesheet", href="../css/style.css")
+        //favicon
+        link(rel="shortcut icon", href="/favicon.ico")
+        link(rel="apple-touch-icon", href="/apple-touch-icon.png")
+        link(rel="icon", type="image/png", href="/android-chrome-192x192.png")
+        // FontAwesome
+        script(src="https://kit.fontawesome.com/2c5a2e8c5a.js", crossorigin="anonymous")
+    body
+        .wrapper--top
+        hesder.header
+            a(href="index.html")
+                img.logo__img(src="../img/logo.png", alt="ロゴ")
+            .header__nav
+                //pcナビ
+                nav.gnav-pc
+                    ul.gnav__list
+                        li.gnav__item
+                            a.gnav__link.gnav__link--home(href=".") home
+                        li.gnav__item
+                            a.gnav__link(href="about.html") about
+                        li.gnav__item
+                            a.gnav__link(href="works.html") works
+                //  spナビ
+                .openbtn
+                    span
+                    span
+                    span
+                nav#g-nav.gnav-sp
+                  ul
+                    li
+                      a(href=".") Home
+                    li
+                      a(href="about.html") About
+                    li
+                      a(href="works.html") Works
+        //top
+        main
