@@ -17,31 +17,146 @@ html(lang="ja")
         script(src="https://kit.fontawesome.com/2c5a2e8c5a.js", crossorigin="anonymous")
     body
         .wrapper--top
-        hesder.header
-            a(href="index.html")
-                img.logo__img(src="../img/logo.png", alt="ロゴ")
-            .header__nav
-                //pcナビ
-                nav.gnav-pc
-                    ul.gnav__list
-                        li.gnav__item
-                            a.gnav__link.gnav__link--home(href=".") home
-                        li.gnav__item
-                            a.gnav__link(href="about.html") about
-                        li.gnav__item
-                            a.gnav__link(href="works.html") works
-                //  spナビ
-                .openbtn
-                    span
-                    span
-                    span
-                nav#g-nav.gnav-sp
-                  ul
-                    li
-                      a(href=".") Home
-                    li
-                      a(href="about.html") About
-                    li
-                      a(href="works.html") Works
-        //top
-        main
+            header.header
+                a(href="index.html")
+                    img.logo__img(src="../img/logo.png", alt="ロゴ")
+                .header__nav
+                    //pcナビ
+                    nav.gnav-pc
+                        ul.gnav__list
+                            li.gnav__item
+                                a.gnav__link.gnav__link--home(href=".") home
+                            li.gnav__item
+                                a.gnav__link(href="about.html") about
+                            li.gnav__item
+                                a.gnav__link(href="works.html") works
+                    //spナビ
+                    .openbtn
+                        span
+                        span
+                        span
+                    nav#g-nav.gnav-sp
+                      ul
+                        li
+                          a(href=".") Home
+                        li
+                          a(href="about.html") About
+                        li
+                          a(href="works.html") Works
+            //top
+            main
+                .top
+                    .top__inner
+                        .top__titleArea
+                            .top__title ポートフォリオ
+                            .top__subtitle 平山　凌
+                        .scrolldown1
+                            span Scroll
+                //about
+                section.about.fadeUpTrigger
+                    .container
+                        .section__heading
+                            h2.heading-primary About
+                        .about__contents
+                            .about__pic
+                                img(src="../img/me.jpg", alt="平山凌")
+                            .about__body
+                                h3.about__title Hirayama Ryo
+                                    span 平山 凌
+                                .about__text
+                                    |　広島県出身の25歳。国家公務員（土木技術職）として働いています。課題解決できるフロントエンドエンジニアを目指し転職活動中。<br>
+                                .about__text
+                                    |　現職で培った”ものづくり”に真摯に向き合う心構えを大切にしながら、お客様の目的の達成に寄与するWebサイトを作り上げていきたいと考えています。
+                        a(href="about.html").btn.btn-flat
+                            span more
+                //skill
+                section.skill.fadeUpTrigger
+                    .container
+                        .section__heading
+                            h2.heading-primary Skill
+                        .skill__body
+                            .skill-list
+                                //skill1つ目
+                                .skill-list__item
+                                    figure.skill-list__img-wrapper
+                                        i.fas.fa-pencil-alt
+                                    .skill-list__body
+                                        .skill-list__title デザイン
+                                        .skill-list__text
+                                            p
+                                                | お客様の要望やその背景にある目的をヒアリングし、目的の達成に寄与するデザインづくりを心がけています。<br>見た目の美しさはもちろん、使いやすさにこだわったデザインを目指します。
+                                //skill2つ目
+                                .skill-list__item
+                                    figure.skill-list__img-wrapper
+                                        i.fas.fa-code
+                                    .skill-list__body
+                                        .skill-list__title コーディング
+                                        .skill-list__text
+                                            p
+                                                | デザインカンプを忠実に再現するとともに、デザインの意図をくみ取りながら動きや効果を適切に使用します。<br>保守・運用性を意識したコーディングを心がけています。
+                //works
+                section.works
+                    .container
+                        .section__heading.fadeUpTrigger
+                            h2.heading-primary Works
+                        .wprks__body
+                            p.works__comment.fadeUpTrigger クリックで詳細をご覧いただけます
+                            ul.works-list
+                                //works1つ目
+                                li.works__item.fadeUpTrigger
+                                    a(href="w_motoyama.html").works__link
+                                        figure.img__wrapper
+                                            img(src="../img/wo1_top.jpg", alt="企業サイト（課題制作）", style="height: auto; width: 100%;")
+                                        .works__head
+                                            h3.works__title 企業サイト（スクール課題制作）
+                                //works2つ目
+                                li.works__item.fadeUpTrigger
+                                    a(href="w_portfolio.html").works__link
+                                        figure.img__wrapper
+                                            img(src="../img/wo2_top.jpg", alt="ポートサイト", style="height: auto; width: 100%;")
+                                        .works__head
+                                            h3.works__title ポートフォリオサイト（本サイト）
+                                //works3つ目
+                                li.works__item.fadeUpTrigger
+                                    a(href="w_gim.html").works__link
+                                        figure.img__wrapper
+                                            img(src="../img/wo3_top.jpg", alt="ジムサイト（課題制作）", style="height: auto; width: 100%;")
+                                        .works__head
+                                            h3.works__title ジムサイト（課題制作）
+                                //works4つ目
+                                li.works__item.fadeUpTrigger
+                                    a(href="w_seminar.html").works__link
+                                        figure.img__wrapper
+                                            img(src="../img/wo4_top.jpg", alt="セミナーサイト（課題制作）", style="height: auto; width: 100%;")
+                                        .works__head
+                                            h3.works__title セミナーサイト（課題制作）
+                                //works5つ目
+                                li.works__item.fadeUpTrigger
+                                    a(href="w_start.html").works__link
+                                        figure.img__wrapper
+                                            img(src="../img/wo5_top.jpg", alt="企業サイト（課題制作）", style="height: auto; width: 100%;")
+                                        .works__head
+                                            h3.works__title 企業サイト（課題制作）
+                                //works6つ目
+                                li.works__item.fadeUpTrigger
+                                    a(href="w_cafe.html").works__link
+                                        figure.img__wrapper
+                                            img(src="../img/wo6_top.jpg", alt="カフェサイト（課題制作）", style="height: auto; width: 100%;")
+                                        .works__head
+                                            h3.works__title カフェサイト（課題制作）
+                                //works7つ目
+                                li.works__item.fadeUpTrigger
+                                    a(href="w_logo.html").works__link
+                                        figure.img__wrapper
+                                            img(src="../img/wo7_top.jpg", alt="ロゴ", style="height: auto; width: 100%;")
+                                        .works__head
+                                            h3.works__title 自身のロゴ
+            //フッター
+            footer.footer
+                .footer__copyright ©Hirayama Ryo All rights reserved.
+            //JS
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js")
+            //originalJS
+            script(src="../js/script.js")
+            script(src="../js/header.js")
