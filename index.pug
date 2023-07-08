@@ -17,32 +17,7 @@ html(lang="ja")
         script(src="https://kit.fontawesome.com/2c5a2e8c5a.js", crossorigin="anonymous")
     body
         .wrapper--top
-            header.header
-                a(href="index.html")
-                    img.logo__img(src="../img/logo.png", alt="ロゴ")
-                .header__nav
-                    //pcナビ
-                    nav.gnav-pc
-                        ul.gnav__list
-                            li.gnav__item
-                                a.gnav__link.gnav__link--home(href=".") home
-                            li.gnav__item
-                                a.gnav__link(href="about.html") about
-                            li.gnav__item
-                                a.gnav__link(href="works.html") works
-                    //spナビ
-                    .openbtn
-                        span
-                        span
-                        span
-                    nav#g-nav.gnav-sp
-                      ul
-                        li
-                          a(href=".") Home
-                        li
-                          a(href="about.html") About
-                        li
-                          a(href="works.html") Works
+            include header.pug
             //top
             main
                 .top
@@ -102,55 +77,58 @@ html(lang="ja")
                         .wprks__body
                             p.works__comment.fadeUpTrigger クリックで詳細をご覧いただけます
                             ul.works-list
-                                //works1つ目
-                                li.works__item.fadeUpTrigger
-                                    a(href="w_motoyama.html").works__link
-                                        figure.img__wrapper
-                                            img(src="../img/wo1_top.jpg", alt="企業サイト（課題制作）", style="height: auto; width: 100%;")
-                                        .works__head
-                                            h3.works__title 企業サイト（スクール課題制作）
-                                //works2つ目
-                                li.works__item.fadeUpTrigger
-                                    a(href="w_portfolio.html").works__link
-                                        figure.img__wrapper
-                                            img(src="../img/wo2_top.jpg", alt="ポートサイト", style="height: auto; width: 100%;")
-                                        .works__head
-                                            h3.works__title ポートフォリオサイト（本サイト）
-                                //works3つ目
-                                li.works__item.fadeUpTrigger
-                                    a(href="w_gim.html").works__link
-                                        figure.img__wrapper
-                                            img(src="../img/wo3_top.jpg", alt="ジムサイト（課題制作）", style="height: auto; width: 100%;")
-                                        .works__head
-                                            h3.works__title ジムサイト（課題制作）
-                                //works4つ目
-                                li.works__item.fadeUpTrigger
-                                    a(href="w_seminar.html").works__link
-                                        figure.img__wrapper
-                                            img(src="../img/wo4_top.jpg", alt="セミナーサイト（課題制作）", style="height: auto; width: 100%;")
-                                        .works__head
-                                            h3.works__title セミナーサイト（課題制作）
-                                //works5つ目
-                                li.works__item.fadeUpTrigger
-                                    a(href="w_start.html").works__link
-                                        figure.img__wrapper
-                                            img(src="../img/wo5_top.jpg", alt="企業サイト（課題制作）", style="height: auto; width: 100%;")
-                                        .works__head
-                                            h3.works__title 企業サイト（課題制作）
-                                //works6つ目
-                                li.works__item.fadeUpTrigger
-                                    a(href="w_cafe.html").works__link
-                                        figure.img__wrapper
-                                            img(src="../img/wo6_top.jpg", alt="カフェサイト（課題制作）", style="height: auto; width: 100%;")
-                                        .works__head
-                                            h3.works__title カフェサイト（課題制作）
-                                //works7つ目
-                                li.works__item.fadeUpTrigger
-                                    a(href="w_logo.html").works__link
-                                        figure.img__wrapper
-                                            img(src="../img/wo7_top.jpg", alt="ロゴ", style="height: auto; width: 100%;")
-                                        .works__head
-                                            h3.works__title 自身のロゴ
+                                -
+                                    const works = [
+                                      {
+                                        link: "w_motoyama.html",
+                                        imgSrc: "../img/wo1_top.jpg",
+                                        alt: "企業サイト（課題制作）",
+                                        title: "企業サイト（スクール課題制作）",
+                                      },
+                                      {
+                                        link: "w_portfolio.html",
+                                        imgSrc: "../img/wo2_top.jpg",
+                                        alt: "ポートフォリオサイト",
+                                        title: "ポートフォリオサイト（本サイト）",
+                                      },
+                                      {
+                                        link: "w_gim.html",
+                                        imgSrc: "../img/wo3_top.jpg",
+                                        alt: "ジムサイト（課題制作）",
+                                        title: "ジムサイト（課題制作）",
+                                      },
+                                      {
+                                        link: "w_seminar.html",
+                                        imgSrc: "../img/wo4_top.jpg",
+                                        alt: "セミナーサイト（課題制作）",
+                                        title: "セミナーサイト（課題制作）",
+                                      },
+                                      {
+                                        link: "w_start.html",
+                                        imgSrc: "../img/wo5_top.jpg",
+                                        alt: "企業サイト（課題制作）",
+                                        title: "企業サイト（課題制作）",
+                                      },
+                                      {
+                                        link: "w_cafe.html",
+                                        imgSrc: "../img/wo6_top.jpg",
+                                        alt: "カフェサイト",
+                                        title: "カフェサイト（課題制作）",
+                                      },
+                                      {
+                                        link: "w_logo.html",
+                                        imgSrc: "../img/wo7_top.jpg",
+                                        alt: "ロゴ",
+                                        title: "自身のロゴ",
+                                      },
+                                    ]
+                                each work in works
+                                    li.works__item.fadeUpTrigger
+                                        a.works__link(href=work.link)
+                                            figure.img__wrapper
+                                                img(src=work.imgSrc, alt=work.alt, style="height: auto; width: 100%")
+                                            .works__head
+                                                h3.works__title= work.title
             //フッター
             footer.footer
                 .footer__copyright ©Hirayama Ryo All rights reserved.
@@ -160,3 +138,5 @@ html(lang="ja")
             //originalJS
             script(src="../js/script.js")
             script(src="../js/header.js")
+
+

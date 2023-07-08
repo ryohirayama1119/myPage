@@ -1,0 +1,41 @@
+//
+//HOMEページのskillのスタイル
+//
+
+
+.skill-list{
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+    @media screen and (min-width: 767px) {
+        column-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__item{
+        padding:30px 40px;
+        //border-radius: 8px;
+        //background-color: $white;
+        border:1px solid $black;
+        //box-shadow: 0 3px 21px rgb(0 0 0 / 16%);
+        @media screen and (min-width: 767px) {
+            padding: 40px;
+        }
+    }
+.skill-list__img-wrapper{
+    text-align: center;
+    margin-bottom: 30px;
+    .fas{
+        font-size: 4em;
+        color: $gray;
+    }
+}
+.skill-list__title{
+    text-align: center;
+}
+.skill-list__text{
+    line-height: 1.5;
+    font-size: 14px;
+    margin-top:10px;
+}
+}
+

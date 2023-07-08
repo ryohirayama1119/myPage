@@ -1,0 +1,112 @@
+//
+//メインビジュアルのスタイル
+//
+
+
+
+
+.mv{
+    position: relative;
+    @media (min-width: 767px){
+      height: 100vh;
+      margin-bottom: 50px;
+    }
+}
+
+.mv-list{
+    height: 600px;
+    margin-inline: auto;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+   @media screen and (min-width: 767px) {
+      height: 100vh;
+    }
+}
+
+@keyframes zoomUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.15); /* 拡大率 */
+    }
+  }
+  .add-animation {
+    animation: zoomUp 10s linear 0s normal both;
+  }
+
+.mv-list__img img{
+  @media screen and (min-width: 767px) {
+  width: 100vw;
+  height: 100vh;
+  }
+}
+
+
+.mv__titleArea{
+  position: absolute;
+  top:40%;
+  margin-left:50px;
+  @media (min-width: 767px){
+    top:30%;
+    margin-left:60px;
+  }
+  .mv__title{
+    font-size: 30px;
+    @media (min-width: 767px){
+      font-size: 3.5vw;
+    }
+  }
+  .mv__subtitle{
+    font-size: 30px;
+    @media (min-width: 767px){
+      font-size: 3.5vw;
+    }
+  }
+}
+
+.mv-sub{
+  position: relative;
+  @media (min-width: 767px){
+  height:340px;
+  margin-bottom: 50px;
+  }
+  .mv-list{
+    height: 140px;
+    @media (min-width: 767px){
+    height: 340px;
+    }
+    .mv-list__img img{
+      height: 140px;
+      width:100vw;
+      object-position: 0% 70%;
+      @media (min-width: 767px){
+      height: 200px;
+      }
+    }
+  }
+  .mv__titleArea{
+    position: absolute;
+    top: 20%;
+    margin-left: 28px;
+    @media (min-width: 767px){
+      top: 10%;
+      margin-left: 60px;
+    }
+    .mv__title{
+      font-size: 20px;
+      @media (min-width: 767px){
+        font-size: 30px;
+      }
+    }
+    .mv__subtitle{
+      font-size: 20px;
+      @media (min-width: 767px){
+        font-size: 30px;
+      }
+    }
+  }
+}
+

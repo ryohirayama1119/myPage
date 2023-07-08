@@ -1,0 +1,206 @@
+//
+//ベースのスタイル
+//
+
+
+// 変数
+$black: #000;
+$white:#FFFFFF;
+$gray:#666;
+$top:#EEE6C7;
+$body:#FDF7EC;
+$brown:#cbb674;
+
+
+//ベース
+html{
+    font-family: 'Shippori Mincho','游明朝体','Yu Mincho','ヒラギノ明朝 Pro W3','Hiragino Mincho Pro', serif;
+    font-size: 16px;
+    line-height: 1.75;
+    color:$black;
+    background-color: $body;
+}
+
+* {
+    box-sizing:border-box;
+ }
+
+ img {
+    max-width: 100%;
+    vertical-align: bottom;
+    height:100%;
+    object-fit: cover;
+}
+
+p{
+    margin:0;
+}
+
+//レイアウト
+section{
+    padding:100px 0 50px 0;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.section__heading{
+    margin-bottom: 40px;
+    text-align: center;
+    .heading-primary{
+        font-size: 30px;
+        @media (min-width: 767px){
+            font-size: 40px;
+        }
+    }
+}
+
+//gnavのカラー
+.wrapper--top .gnav__link--home{
+    opacity: .6;
+}
+
+//ボタン
+
+//.btn{
+//    display: block;
+//    max-width: 200px;
+//    margin: 0 auto;
+//    font-size: 16px;
+//    font-weight: bold;
+//    line-height: 1;
+//    letter-spacing: 0.05em;
+//    color: $black;
+//    text-align: center;
+//    padding: 20px 10px;
+//    transition: all 0.3s;
+//    border:1px solid $black;
+//    font-family:'Shippori Mincho';
+//    &:hover{
+//        color:$white;
+//        background-color: $gray;
+//    }
+//}
+
+a.btn{
+    font-size: 16px;
+    width:200px;
+    line-height: 1.5;
+    position: relative;
+    display: block;
+    padding: 20px 10px;
+    margin:0 auto;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: $black;
+    border: 1px solid $black;
+  }
+
+
+
+
+  a.btn-flat {
+      overflow: hidden;
+    }
+
+    a.btn-flat span {
+      position: relative;
+    }
+
+    a.btn-flat:before {
+      position: absolute;
+      top: 0;
+      left: 65px;
+      width: 200%;
+      height: 500%;
+      content: '';
+      -webkit-transition: all .5s ease-in-out;
+      transition: all 1s ease-in-out;
+      -webkit-transform: translateX(-98%) translateY(-70%) rotate(135deg);
+      transform: translateX(-98%) translateY(-70%) rotate(135deg);
+      background: $top;
+    }
+
+    @media screen and (min-width: 767px) {
+        a.btn-flat:hover:before {
+          -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
+          transform: translateX(-20%) translateY(-25%) rotate(135deg);
+        }
+    }
+
+
+
+
+
+
+.sp{
+    @media (min-width: 767px){
+        display: none;
+    }
+}
+
+
+
+.footer{
+    display: grid;
+    padding: 20px 20px;
+    place-items: center;
+    margin-top:100px;
+    font-family: 'Shippori Mincho';
+    .icon8__link a{
+        border-bottom: 1px solid $gray;
+        color: $gray;
+    }
+}
+
+//スクロールしてふわっと表示
+.fadeUpTrigger{
+    opacity: 0;
+    }
+
+    .fadeUp {
+        animation-name: fadeUpAnime;
+        animation-duration:2s;
+        animation-fill-mode:forwards;
+        opacity: 0;
+    }
+    @keyframes fadeUpAnime{
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+/* その場でふわっと */
+.fadeIn{
+    animation-name:fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+
+    @keyframes fadeInAnime{
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }

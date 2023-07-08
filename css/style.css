@@ -1,0 +1,949 @@
+@charset "UTF-8";
+/* 文字コードの指定 */
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Shippori+Mincho:wght@400;600;700&display=swap");
+html {
+  font-family: "Shippori Mincho", "游明朝体", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #000;
+  background-color: #FDF7EC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+p {
+  margin: 0;
+}
+
+section {
+  padding: 100px 0 50px 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.section__heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.section__heading .heading-primary {
+  font-size: 30px;
+}
+@media (min-width: 767px) {
+  .section__heading .heading-primary {
+    font-size: 40px;
+  }
+}
+
+.wrapper--top .gnav__link--home {
+  opacity: 0.6;
+}
+
+a.btn {
+  font-size: 16px;
+  width: 200px;
+  line-height: 1.5;
+  position: relative;
+  display: block;
+  padding: 20px 10px;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.3s;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #000;
+  border: 1px solid #000;
+}
+
+a.btn-flat {
+  overflow: hidden;
+}
+
+a.btn-flat span {
+  position: relative;
+}
+
+a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 65px;
+  width: 200%;
+  height: 500%;
+  content: "";
+  transition: all 1s ease-in-out;
+  transform: translateX(-98%) translateY(-70%) rotate(135deg);
+  background: #EEE6C7;
+}
+
+@media screen and (min-width: 767px) {
+  a.btn-flat:hover:before {
+    transform: translateX(-20%) translateY(-25%) rotate(135deg);
+  }
+}
+@media (min-width: 767px) {
+  .sp {
+    display: none;
+  }
+}
+
+.footer {
+  display: grid;
+  padding: 20px 20px;
+  place-items: center;
+  margin-top: 100px;
+  font-family: "Shippori Mincho";
+}
+.footer .icon8__link a {
+  border-bottom: 1px solid #666;
+  color: #666;
+}
+
+.fadeUpTrigger {
+  opacity: 0;
+}
+
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* その場でふわっと */
+.fadeIn {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.top {
+  max-height: 1080px;
+  margin: 0 auto;
+  padding: 10px 0;
+  background-color: #EEE6C7;
+}
+.top__inner {
+  box-sizing: content-box;
+  max-width: 1200px;
+  height: 100vh;
+  max-height: 1080px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url(../img/top_sp.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+@media (min-width: 767px) {
+  .top__inner {
+    background-image: url(../img/top_tab.png);
+  }
+}
+@media (min-width: 1000px) {
+  .top__inner {
+    background-image: url(../img/top_pc.png);
+  }
+}
+.top__titleArea {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  text-align: center;
+}
+.top__titleArea .top__title {
+  font-size: 25px;
+  line-height: 1.46;
+}
+.top__titleArea .top__subtitle {
+  font-size: 20px;
+}
+.top__titleArea::after {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 42px;
+  bottom: -186px;
+  width: 100px;
+  height: 75px;
+  background-image: url(../img/rose.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
+/*スクロールダウン全体の場所*/
+.scrolldown1 {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  left: 50%;
+  bottom: 75px;
+  /*全体の高さ*/
+  height: 50px;
+}
+@media (min-width: 767px) {
+  .scrolldown1 {
+    bottom: 150px;
+  }
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span {
+  /*描画位置*/
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  /*テキストの形状*/
+  color: #623d1c;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  top: 0;
+  /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #623d1c;
+  /*線の動き1.4秒かけて動く。永遠にループ*/
+  -webkit-animation: pathmove 1.4s ease-in-out infinite;
+          animation: pathmove 1.4s ease-in-out infinite;
+  opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@-webkit-keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+@keyframes pathmove {
+  0% {
+    height: 0;
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    top: 50px;
+    opacity: 0;
+  }
+}
+.header {
+  font-family: "Shippori Mincho";
+  height: auto;
+  width: 100vw;
+  background-color: #EEE6C7;
+  padding: 10px;
+  display: flex;
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.logo {
+  display: flex;
+}
+.logo__img {
+  width: 45px;
+  height: 45px;
+  display: block;
+}
+@media (min-width: 767px) {
+  .logo__img {
+    width: 4.5vw;
+    height: 4.5vw;
+  }
+}
+
+/*========= ナビゲーションのためのCSS ===============*/
+#g-nav {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position: fixed;
+  z-index: 999;
+  /*ナビのスタート位置と形状*/
+  top: -120%;
+  left: 0;
+  width: 100%;
+  height: 100vh; /*ナビの高さ*/
+  background: rgba(255, 255, 255, 0.8);
+  /*動き*/
+  transition: all 0.6s;
+}
+
+/*アクティブクラスがついたら位置を0に*/
+#g-nav.panelactive {
+  top: 0;
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list {
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh; /*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*リストのレイアウト設定*/
+#g-nav li {
+  list-style: none;
+  text-align: center;
+}
+
+#g-nav li a {
+  color: #666;
+  text-decoration: none;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  border-bottom: 1px solid #666;
+}
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+  position: fixed;
+  z-index: 9999; /*ボタンを最前面に*/
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+@media (min-width: 767px) {
+  .openbtn {
+    display: none;
+  }
+}
+
+/*×に変化*/
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #666;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+.gnav-pc {
+  display: none;
+}
+@media (min-width: 767px) {
+  .gnav-pc {
+    display: block;
+    height: auto;
+    padding: 2vw 0 0 0;
+    position: fixed;
+    top: 0;
+    right: 10px;
+    z-index: 100;
+  }
+}
+@media (min-width: 767px) {
+  .gnav-pc .gnav__list {
+    display: flex;
+    justify-content: right;
+  }
+}
+@media (min-width: 767px) {
+  .gnav-pc .gnav__list .gnav__item {
+    margin-right: 2.75vw;
+  }
+}
+@media (min-width: 767px) {
+  .gnav-pc .gnav__list .gnav__item .gnav__link {
+    letter-spacing: 0.1em;
+    font-size: 1.4vw;
+  }
+}
+
+.wrapper--top .gnav__link--home {
+  opacity: 0.6;
+}
+
+.wrapper--about .gnav__link--about {
+  opacity: 0.6;
+}
+
+.wrapper--works .gnav__link--works {
+  opacity: 0.6;
+}
+
+.wrapper--top .header {
+  display: none;
+}
+
+.wrapper--top .header--active {
+  display: flex;
+}
+
+.about__contents {
+  display: grid;
+  row-gap: 30px;
+  margin-bottom: 50px;
+}
+@media (min-width: 767px) {
+  .about__contents {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.about__contents .about__pic {
+  height: 300px;
+  text-align: center;
+}
+
+.about__title {
+  font-size: 25px;
+}
+.about__title span {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.about__text {
+  font-family: "Shippori Mincho";
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.strength-list {
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 767px) {
+  .strength-list {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.strength-list__item {
+  padding: 30px 10px;
+}
+@media screen and (min-width: 767px) {
+  .strength-list__item {
+    padding: 20px;
+  }
+}
+.strength-list__img-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.strength-list__img-wrapper .fas {
+  font-size: 4em;
+  color: #666;
+}
+.strength-list__title {
+  text-align: center;
+}
+.strength-list__text {
+  line-height: 1.5;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.skill-soft__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 500px;
+}
+@media screen and (min-width: 767px) {
+  .skill-soft__items {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 80px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+.skill-soft__items .skill-soft__item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.skill-soft__items .skill-soft__item .skill-soft__body {
+  width: 70%;
+  font-family: "Shippori Mincho";
+  font-size: 16px;
+}
+.skill-soft__items .skill-soft__item .skill-soft__body .skill-soft__title {
+  margin-bottom: 5px;
+}
+.skill-soft__items .skill-soft__item .skill-soft__body .skill-soft__text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.skill-soft__item:nth-child(3) img {
+  height: 45px;
+}
+
+.skill-soft__head img {
+  height: 60px;
+}
+
+.tool__items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 500px;
+}
+@media screen and (min-width: 767px) {
+  .tool__items {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 80px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+.tool__items .tool__item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.tool__items .tool__item .tool__body {
+  width: 70%;
+  font-family: "Shippori Mincho";
+  font-size: 16px;
+}
+.tool__items .tool__item .tool__body .tool__title {
+  margin-bottom: 5px;
+}
+.tool__items .tool__item .tool__body .tool__text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tool__item:nth-child(3) img {
+  height: 40px;
+}
+
+.tool__item:nth-child(5) img {
+  height: auto;
+  width: 70px;
+}
+
+.tool__head img {
+  height: 60px;
+}
+
+.career__contents {
+  padding-left: 20px;
+  border-left: 1px solid #666;
+}
+.career__contents .career__box {
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 767px) {
+  .career__contents .career__box {
+    padding-bottom: 50px;
+  }
+}
+.career__contents .career__box .career__heading {
+  position: relative;
+  font-size: 20px;
+  font-family: "Shippori Mincho";
+  padding-bottom: 5px;
+}
+.career__contents .career__box .career__heading::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: -27px;
+  width: 14px;
+  height: 14px;
+  background-color: #666;
+  z-index: 2;
+}
+.career__contents .career__box .career__text {
+  line-height: 1.5;
+  font-family: "Shippori Mincho";
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.license {
+  margin-top: 50px;
+}
+.license .license__title {
+  font-size: 20px;
+}
+.license .license__text {
+  font-family: "Shippori Mincho";
+  padding-left: 10px;
+}
+
+.career__img {
+  height: 200px;
+  width: 100%;
+  background-image: url(/img/library.jpg);
+  background-position: center top;
+  background-size: cover;
+}
+@media screen and (min-width: 767px) {
+  .career__img {
+    height: 350px;
+  }
+}
+
+.skill-list {
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 767px) {
+  .skill-list {
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.skill-list__item {
+  padding: 30px 40px;
+  border: 1px solid #000;
+}
+@media screen and (min-width: 767px) {
+  .skill-list__item {
+    padding: 40px;
+  }
+}
+.skill-list .skill-list__img-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.skill-list .skill-list__img-wrapper .fas {
+  font-size: 4em;
+  color: #666;
+}
+.skill-list .skill-list__title {
+  text-align: center;
+}
+.skill-list .skill-list__text {
+  line-height: 1.5;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+.works-list .works__link {
+  display: block;
+}
+.works-list .works__link:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+.works-list .works__link .img__wrapper {
+  border: 1px solid rgba(62, 62, 62, 0.1);
+  box-shadow: 6px 6px 0px rgba(62, 62, 62, 0.1);
+}
+
+.works__comment {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+@media (min-width: 767px) {
+  .works__comment {
+    font-size: 16px;
+  }
+}
+
+.works__head {
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.works__item-img {
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-full-page-media, :future, :root .works__item-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.works-case__pic {
+  margin-bottom: 40px;
+  border: 5px double #99833c;
+  padding-top: 30px;
+}
+.works-case__pic img {
+  max-width: 100%;
+  height: auto;
+}
+.works-case__head {
+  font-size: 20px;
+  padding: 5px 10px;
+  border-left: solid 10px #cbb674;
+  background: #EEE6C7;
+  display: inline;
+}
+.works-case__item {
+  padding: 20px 0;
+}
+.works-case__item .works-case__title {
+  font-family: "Shippori Mincho";
+  padding-right: 5px;
+  border-bottom: 2px solid #cbb674;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.works-case__item .works-case__text {
+  padding-top: 15px;
+  font-family: "Shippori Mincho";
+}
+.works-case__item a {
+  text-decoration: underline;
+  color: #cbb674;
+  padding-top: 15px;
+  display: block;
+}
+.works-case__captcha {
+  margin-top: 100px;
+}
+@media (min-width: 767px) {
+  .works-case__captcha {
+    display: flex;
+    justify-content: center;
+  }
+}
+.works-case__captcha .captcha__item {
+  width: 100%;
+}
+.works-case__captcha .captcha__item p {
+  font-family: "Shippori Mincho";
+}
+.works-case__captcha .captcha__item img {
+  height: auto;
+  box-shadow: 4px 4px 12px rgba(62, 62, 62, 0.3);
+}
+.works-case__captcha .captcha__item--pc {
+  max-width: 420px;
+  margin: 0 auto 40px;
+}
+@media (min-width: 767px) {
+  .works-case__captcha .captcha__item--pc {
+    width: 50%;
+    margin: 0 60px 0 0;
+  }
+}
+.works-case__captcha .captcha__item--sp {
+  max-width: 280px;
+  margin: 0 auto;
+}
+@media (min-width: 767px) {
+  .works-case__captcha .captcha__item--sp {
+    width: 15%;
+    margin: 0;
+  }
+}
+
+::-webkit-full-page-media, :future, :root .works-case__pic img {
+  max-width: 100%;
+  height: auto;
+}
+
+.works__btn .btn {
+  margin-top: 100px;
+}
+
+.coding-practice {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.coding-practice a {
+  text-decoration: underline;
+  color: #cbb674;
+}
+
+.works-case__ul {
+  padding-top: 4px;
+}
+.works-case__ul li::before {
+  content: ""; /* 空の要素作成 */
+  width: 7px; /* 幅指定 */
+  height: 7px; /* 高さ指定 */
+  display: inline-block; /* インラインブロックにする */
+  background-color: #cbb674; /* 背景色指定 */
+  border-radius: 50%; /* 要素を丸くする */
+  position: relative; /* 位置調整 */
+  top: -1px; /* 位置調整 */
+  margin-right: 5px; /* 余白指定 */
+}
+
+.works-case__ol li {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+.ol-contents {
+  padding-top: 10px;
+}
+
+.works-logolist {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.works-logolist .works_logolistItem {
+  margin-bottom: 30px;
+  width: calc(50% - 2vw);
+}
+@media (min-width: 767px) {
+  .works-logolist .works_logolistItem {
+    width: 40%;
+  }
+}
+.works-logolist .works_logolistItem--full {
+  width: 100%;
+}
+
+.notosans {
+  font-family: "Noto Sans Japanese";
+}/*# sourceMappingURL=style.css.map */

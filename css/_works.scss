@@ -1,0 +1,186 @@
+//
+//worksのスタイル
+//
+
+
+.works-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+        .works__link{
+            display: block;
+            &:hover{
+                cursor: pointer;
+                opacity: .7;
+                transition: all 0.3s;
+            }
+            .img__wrapper{
+                border: 1px solid rgb(62, 62, 62, 0.1);
+                box-shadow: 6px 6px 0px rgb(62 62 62 / 10%);
+            }
+        }
+}
+
+.works__comment{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 14px;
+    @media (min-width: 767px){
+        font-size: 16px;
+    }
+}
+.works__head{
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+
+.works__item-img{
+    max-width: 100%;
+    height: auto;
+}
+
+//safariレイアウト崩れ対応
+::-webkit-full-page-media,:future,:root .works__item-img{
+    max-width: 100%;
+    height: auto;
+}
+
+//works個別ページのスタイル
+.works-case{
+    &__pic{
+        margin-bottom: 40px;
+        border:5px double #99833c;
+        padding-top:30px;
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    &__head{
+        font-size: 20px;
+        padding:5px 10px ;
+        border-left: solid 10px #cbb674;
+        background: $top;
+        display: inline;
+    }
+    &__item{
+        padding:20px 0;
+        .works-case__title{
+            font-family: 'Shippori Mincho';
+            padding-right: 5px;
+            border-bottom:2px solid #cbb674;
+            width: fit-content;
+        }
+        .works-case__text{
+            padding-top:15px;
+            font-family: 'Shippori Mincho';
+        }
+        a{
+            text-decoration: underline;
+            color: #cbb674;
+            padding-top: 15px;
+            display: block;
+        }
+    }
+    &__captcha{
+        margin-top:100px;
+        @media (min-width: 767px){
+            display: flex;
+            justify-content: center;
+        }
+        .captcha__item{
+            width: 100%;
+            & p{
+                font-family: 'Shippori Mincho';
+            }
+            & img{
+                height: auto;
+                box-shadow: 4px 4px 12px rgb(62 62 62 / 30%);
+            }
+        }
+        .captcha__item--pc{
+            max-width: 420px;
+            margin: 0 auto 40px;
+            @media (min-width: 767px){
+                width:50%;
+                margin:0 60px 0 0;
+            }
+        }
+        .captcha__item--sp{
+            max-width: 280px;
+            margin: 0 auto;
+            @media (min-width: 767px){
+                width:15%;
+                margin:0;
+            }
+        }
+    }
+}
+
+::-webkit-full-page-media,:future,:root .works-case__pic img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+//一覧へ戻るボタン
+.works__btn .btn{
+    margin-top: 100px;
+}
+
+//出典
+.coding-practice{
+    font-size: 13px;
+    margin-top: 5px;
+    a{
+        text-decoration: underline;
+        color: #cbb674;
+    }
+}
+
+.works-case__ul {
+    padding-top: 4px;
+        li::before{
+            content:  "";     /* 空の要素作成 */
+            width:  7px;               /* 幅指定 */
+            height:  7px;              /* 高さ指定 */
+            display:  inline-block;     /* インラインブロックにする */
+            background-color: $brown;  /* 背景色指定 */
+            border-radius:  50%;        /* 要素を丸くする */
+            position:  relative;        /* 位置調整 */
+            top: -1px;                  /* 位置調整 */
+            margin-right: 5px;          /* 余白指定 */
+        }
+}
+
+.works-case__ol li{
+    list-style: decimal;
+    margin-left: 20px;
+}
+
+.ol-contents{
+    padding-top:10px;
+}
+
+//logoの画像list
+.works-logolist{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    .works_logolistItem{
+        margin-bottom: 30px;
+        width: calc(50% - 2vw);
+        @media (min-width: 767px){
+            width: 40%;
+        }
+    }
+    .works_logolistItem--full{
+        width:100%;
+    }
+}
+
+.notosans{
+    font-family:'Noto Sans Japanese';
+}

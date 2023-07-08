@@ -1,0 +1,224 @@
+//
+//aboutのスタイル
+//
+
+.about__contents{
+    display: grid;
+    row-gap: 30px;
+    margin-bottom:50px;
+    @media (min-width: 767px){
+        column-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .about__pic{
+        height: 300px;
+        text-align: center;
+    }
+}
+.about__title{
+    font-size: 25px;
+    span{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+}
+
+
+.about__text{
+    font-family: 'Shippori Mincho';
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+//
+//aboutページのstrengthのスタイル
+//
+.strength-list{
+    display: grid;
+    row-gap: 30px;
+    grid-template-columns: 1fr;
+    @media screen and (min-width: 767px) {
+        column-gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__item{
+        padding:30px 10px;
+        @media screen and (min-width: 767px) {
+            padding: 20px;
+        }
+    }
+    &__img-wrapper{
+        text-align: center;
+        margin-bottom: 30px;
+        .fas{
+            font-size: 4em;
+            color:$gray;
+        }
+    }
+    &__title{
+        text-align: center;
+    }
+    &__text{
+        line-height: 1.5;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+//
+//aboutページのskillのスタイル
+//
+.skill-soft__items{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 500px;
+    @media screen and (min-width: 767px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 80px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .skill-soft__item{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        align-items: center;
+        .skill-soft__body{
+            width:70%;
+            font-family: 'Shippori Mincho';
+            font-size: 16px;
+            .skill-soft__title{
+                margin-bottom: 5px;
+            }
+            .skill-soft__text{
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.skill-soft__item:nth-child(3) img{
+    height: 45px;
+}
+
+
+.skill-soft__head img{
+    height: 60px;
+}
+
+
+//
+//aboutページのtoolのスタイル
+//
+.tool__items{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 500px;
+    @media screen and (min-width: 767px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 80px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .tool__item{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        align-items: center;
+        .tool__body{
+            width:70%;
+            font-family: 'Shippori Mincho';
+            font-size: 16px;
+            .tool__title{
+                margin-bottom: 5px;
+            }
+            .tool__text{
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+.tool__item:nth-child(3) img{
+    height: 40px;
+}
+.tool__item:nth-child(5) img{
+    height: auto;
+    width: 70px;
+}
+
+
+.tool__head img{
+    height: 60px;
+}
+
+//
+//careerのスタイル
+//
+.career__contents{
+    padding-left:20px;
+    border-left:1px solid $gray;
+    .career__box{
+        padding-bottom:30px;
+        @media screen and (min-width: 767px) {
+            padding-bottom: 50px;
+        }
+    .career__heading{
+        position: relative;
+        font-size: 20px;
+        font-family: 'Shippori Mincho';
+        padding-bottom:5px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 13px;
+            left: -27px;
+            width: 14px;
+            height: 14px;
+            background-color: $gray;
+            z-index: 2;
+        }
+    }
+    .career__text{
+        line-height: 1.5;
+        font-family: 'Shippori Mincho';
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+}
+
+//資格のスタイル
+.license{
+    margin-top:50px;
+    .license__title{
+        font-size: 20px;
+    }
+    .license__text{
+    font-family: 'Shippori Mincho';
+    padding-left: 10px;
+    }
+}
+
+//図書館の画像のスタイル
+.career__img{
+    height: 200px;
+    width: 100%;
+    background-image: url(/img/library.jpg);
+    background-position: center top;
+    background-size: cover;
+    @media screen and (min-width: 767px) {
+        height: 350px;
+    }
+}
